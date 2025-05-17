@@ -125,8 +125,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   adjust:
-  - EP TOG
-  - OUT TOG
+  - c
+  - a
   - ''
   - ''
   - ''
