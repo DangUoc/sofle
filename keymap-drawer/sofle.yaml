@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DELETE, ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT,
-    Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI]
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC, TAB, Q, W, E, R, T, Y, U, I, O, P, \, CAPS, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
+    X, C, V, B, MUTE, Gui+L, N, M, ',', ., /, PSCRN, LCTRL, LGUI, LALT, ENTER, lower, raise, SPACE, DEL, '-', '=']
   lower:
   - '&studio_unlock'
   - F1
@@ -35,14 +35,14 @@ layers:
   - '%'
   - ^
   - '&'
-  - KP MULTIPLY
+  - '*'
   - (
   - )
   - '|'
   - {t: ▽, type: trans}
   - '='
   - '-'
-  - KP PLUS
+  - +
   - '{'
   - '}'
   - {t: ▽, type: trans}
@@ -53,11 +53,11 @@ layers:
   - ':'
   - \
   - {t: ▽, type: trans}
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -119,44 +119,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   adjust:
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - EP TOG
-  - RGB HUD
-  - RGB HUI
-  - RGB SAD
-  - RGB SAI
-  - RGB EFF
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - RGB BRD
-  - RGB BRI
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - OUT TOG
   - ''
   - ''
   - ''
@@ -168,6 +138,11 @@ layers:
   - ''
   - ''
   - RGB TOG
+  - RGB HUI
+  - RGB SAI
+  - RGB BRI
+  - RGB SPI
+  - RGB EFF
   - ''
   - ''
   - ''
@@ -175,13 +150,38 @@ layers:
   - ''
   - ''
   - ''
+  - RGB HUD
+  - RGB SAD
+  - RGB BRD
+  - RGB SPD
+  - RGB EFR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bl BL_TOG'
+  - '&bl BL_CYCLE'
+  - '&bl BL_INC'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bl BL_DEC'
   - ''
   - ''
   - ''
   - {type: held}
-  - ''
-  - ''
   - {type: held}
+  - ''
   - ''
   - ''
   - ''
