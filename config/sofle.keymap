@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDLOWER";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo 1>, <&tog 1>;
 
             tapping-term-ms = <400>;
         };
