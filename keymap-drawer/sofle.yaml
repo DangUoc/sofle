@@ -179,8 +179,8 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: Default, h: toggle}
+  - {t: Default, h: toggle}
   - ''
   - ''
   - ''
