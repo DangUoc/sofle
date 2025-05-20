@@ -195,7 +195,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&studio_unlock'
+  - ''
   - ''
   - ''
   - ''
@@ -227,7 +227,7 @@ layers:
   - RGB SPD
   - RGB EFR
   - RGB TOG
-  - '&sys_reset'
+  - '&studio_unlock'
   - ''
   - ''
   - ''
