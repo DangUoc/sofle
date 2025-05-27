@@ -65,14 +65,6 @@
 
             tapping-term-ms = <400>;
         };
-
-        S_OFF: S_OFF {
-            compatible = "zmk,behavior-soft-off";
-            label = "S_OFF";
-            #binding-cells = <0>;
-            hold-time-ms = <5000>;
-            split-peripheral-off-on-press;
-        };
     };
 
     keymap {
@@ -133,7 +125,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                        &none  &none  &none  &none  &none  &none
 &none       &none         &none         &none            &none            &none                                               &none  &none  &none  &none  &none  &none
 &none       &none         &none         &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                                     &none  &none  &none  &none  &none  &none
-&S_OFF      &none         &none         &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG    &studio_unlock  &none  &none  &none  &none  &none  &none
+&none       &none         &none         &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG    &studio_unlock  &none  &none  &none  &none  &none  &none
                           &none         &none            &none            &none            &to 0              &to 0           &none  &none  &none  &none
             >;
 
