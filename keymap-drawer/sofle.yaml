@@ -26,7 +26,7 @@ layers:
   - {t: P, h: ']'}
   - \
   - CAPS
-  - A
+  - '&SelectAll'
   - S
   - D
   - F
@@ -55,8 +55,8 @@ layers:
   - '&Clipboard'
   - LEFT ALT
   - ENTER
-  - '&TDLower'
-  - '&TDRaise'
+  - '&Lower'
+  - '&Raise'
   - SPACE
   - PRINTSCREEN
   - HOME
