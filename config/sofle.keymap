@@ -82,7 +82,7 @@
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp LC(X)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         Copy: Copy {
@@ -91,7 +91,7 @@
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LC(C)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         Paste: Paste {
@@ -100,7 +100,7 @@
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LC(V)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         Rename: Rename {
@@ -109,7 +109,7 @@
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp F2>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         Refresh: Refresh {
@@ -118,7 +118,7 @@
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp F5>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         Clipboard: Clipboard {
@@ -127,7 +127,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN>, <&kp LG(V)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
     };
 
