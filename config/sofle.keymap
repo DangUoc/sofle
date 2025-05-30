@@ -145,6 +145,10 @@
 &kp LSHFT               &kp Z   &Cut       &Copy       &Paste        &kp B      &kp K_MUTE    &kp LG(L)  &kp N      &kp M            &kp COMMA  &kp DOT                   &kp FSLH                   &kp RSHFT
                                 &kp LCTRL  &Clipboard  &kp LEFT_ALT  &kp ENTER  &TDLower      &TDRaise   &kp SPACE  &kp PRINTSCREEN  &kp HOME   &kp END
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp DOWN UP>;
         };
 
         // ------------------------------------------------------------------------------------------------------------
@@ -161,7 +165,9 @@
 
             //none sensor-bindings
 
-            sensor-bindings = <&none>, <&none>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp DOWN UP>;
         };
 
         // ------------------------------------------------------------------------------------------------------------
@@ -178,7 +184,9 @@
 
             //none sensor-bindings
 
-            sensor-bindings = <&none>, <&none>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp DOWN UP>;
         };
 
         // ------------------------------------------------------------------------------------------------------------
