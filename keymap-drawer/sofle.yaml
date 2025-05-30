@@ -238,8 +238,8 @@ layers:
   - ''
   - ''
   - ''
-  - {t: Lower, h: toggle}
-  - {t: Lower, h: toggle}
+  - {t: Default, h: toggle}
+  - {t: Default, h: toggle}
   - ''
   - ''
   - ''
