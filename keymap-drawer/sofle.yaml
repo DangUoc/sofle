@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  Default:
+  Base:
   - {t: ESCAPE, h: '`'}
   - '1'
   - '&Rename'
@@ -238,8 +238,8 @@ layers:
   - ''
   - ''
   - ''
-  - {t: Default, h: toggle}
-  - {t: Default, h: toggle}
+  - {t: Base, h: toggle}
+  - {t: Base, h: toggle}
   - ''
   - ''
   - ''
