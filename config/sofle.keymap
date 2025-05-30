@@ -17,8 +17,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-&mt { flavor = "tap-preferred"; };
-
 / {
     // ------------------------------------------------------------------------------------------------------------
     // Activate ADJUST layer by pressing raise and lower
@@ -27,7 +25,7 @@
         compatible = "zmk,conditional-layers";
 
         Adjust {
-            if-layers = <1 2>;
+            if-layers = <2 2>;
             then-layer = <3>;
         };
     };
@@ -55,7 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDLOWER";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&tog 1>;
+            bindings = <&mo 2>, <&tog 2>;
 
             tapping-term-ms = <400>;
         };
@@ -92,37 +90,54 @@
 
         Cut: Cut {
             compatible = "zmk,behavior-tap-dance";
-            label = "CUT";
+            label = "X";
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp K_CUT>;
         };
 
         Copy: Copy {
             compatible = "zmk,behavior-tap-dance";
-            label = "COPY";
+            label = "C";
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp K_COPY>;
         };
 
         Paste: Paste {
             compatible = "zmk,behavior-tap-dance";
-            label = "PASTE";
+            label = "V";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp K_PASTE>;
         };
 
         Rename: Rename {
             compatible = "zmk,behavior-tap-dance";
-            label = "RENAME";
+            label = "F2";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp F2>;
         };
 
         Refresh: Refresh {
             compatible = "zmk,behavior-tap-dance";
-            label = "REFRESH";
+            label = "F5";
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp F5>;
+        };
+
+        Hold_Tap: Hold_Tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        Volume: Volume {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VOLUME";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
         };
     };
 
@@ -134,11 +149,11 @@
         Default {
             label = "Default";
             bindings = <
-&mt GRAVE ESCAPE  &kp N1  &Rename    &kp N3    &kp N4        &Refresh                            &kp N6     &kp N7           &kp N8     &mt MINUS NUMBER_9  &mt EQUAL NUMBER_0  &mt DELETE BACKSPACE
-&kp TAB           &kp Q   &kp W      &kp E     &kp R         &kp T                               &kp Y      &kp U            &kp I      &kp O               &kp P               &kp BSLH
-&kp CAPS          &kp A   &kp S      &kp D     &kp F         &kp G                               &kp H      &kp J            &kp K      &kp L               &kp SEMI            &kp SQT
-&kp LSHFT         &kp Z   &Cut       &Copy     &Paste        &kp B      &kp K_MUTE    &kp LG(L)  &kp N      &kp M            &kp COMMA  &kp DOT             &kp FSLH            &kp RSHFT
-                          &kp LCTRL  &kp LGUI  &kp LEFT_ALT  &kp ENTER  &TDLower      &TDRaise   &kp SPACE  &kp PRINTSCREEN  &kp HOME   &kp END
+&Hold_Tap GRAVE ESCAPE  &kp N1  &Rename    &kp N3    &kp N4        &Refresh                            &kp N6     &kp N7           &kp N8     &Hold_Tap MINUS NUMBER_9  &Hold_Tap EQUAL NUMBER_0  &Hold_Tap DELETE BACKSPACE
+&kp TAB                 &kp Q   &kp W      &kp E     &kp R         &kp T                               &kp Y      &kp U            &kp I      &kp O                     &kp P                     &kp BSLH
+&kp CAPS                &kp A   &kp S      &kp D     &kp F         &kp G                               &kp H      &kp J            &kp K      &kp L                     &kp SEMI                  &kp SQT
+&kp LSHFT               &kp Z   &Cut       &Copy     &Paste        &kp B      &kp K_MUTE    &kp LG(L)  &kp N      &kp M            &kp COMMA  &kp DOT                   &kp FSLH                  &kp RSHFT
+                                &kp LCTRL  &kp LGUI  &kp LEFT_ALT  &kp ENTER  &TDLower      &TDRaise   &kp SPACE  &kp PRINTSCREEN  &kp HOME   &kp END
             >;
 
             sensor-bindings = <&Scroll_UD>, <&Scroll_LR>;
@@ -157,6 +172,8 @@
             >;
 
             //none sensor-bindings
+
+            sensor-bindings = <&Volume>, <&Seeker>;
         };
 
         // ------------------------------------------------------------------------------------------------------------
@@ -173,9 +190,7 @@
 
             //none sensor-bindings
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&Seeker>;
+            sensor-bindings = <&Volume>, <&Seeker>;
         };
 
         // ------------------------------------------------------------------------------------------------------------
@@ -187,7 +202,7 @@
 &none       &none         &none         &none         &none            &none                                               &none  &none  &none  &none  &none  &none
 &none       &none         &none         &none         &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                                     &none  &none  &none  &none  &none  &none
 &none       &none         &none         &none         &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG    &studio_unlock  &none  &none  &none  &none  &none  &none
-                          &none         &none         &none            &none            &to 0              &to 0           &none  &none  &none  &none
+                          &none         &none         &none            &none            &to 1              &to 1           &none  &none  &none  &none
             >;
 
             sensor-bindings = <&RGB_Bright>, <&RGB_HUE>;
