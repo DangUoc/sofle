@@ -45,26 +45,7 @@
             label = "RGB_BRIGHT";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
-
             tap-ms = <5>;
-        };
-
-        TDLower: TDLower {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDLOWER";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&tog 2>;
-
-            tapping-term-ms = <400>;
-        };
-
-        TDRaise: TDRaise {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDRAISE";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&tog 2>;
-
-            tapping-term-ms = <400>;
         };
 
         Scroll_UD: Scroll_UD {
@@ -88,6 +69,30 @@
             bindings = <&kp C_REWIND>, <&kp C_FAST_FORWARD>;
         };
 
+        Volume: Volume {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VOLUME";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
+        };
+
+        TDLower: TDLower {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDLOWER";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+
+            tapping-term-ms = <400>;
+        };
+
+        TDRaise: TDRaise {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDRAISE";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+            tapping-term-ms = <400>;
+        };
+ 
         Cut: Cut {
             compatible = "zmk,behavior-tap-dance";
             label = "X";
@@ -127,17 +132,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        Volume: Volume {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "VOLUME";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
         };
     };
 
