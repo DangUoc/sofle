@@ -140,7 +140,7 @@
             label = "Default";
             bindings = <
 &Hold_Tap GRAVE ESCAPE  &kp N1  &Rename    &kp N3      &kp N4        &Refresh                            &kp N6     &kp N7           &kp N8     &Hold_Tap MINUS NUMBER_9  &Hold_Tap EQUAL NUMBER_0   &Hold_Tap DELETE BACKSPACE
-&kp TAB                 &kp Q   &kp W      &kp E       &kp R         &kp T                               &kp Y      &kp U            &kp I      &Hold_Tap O LEFT_BRACKET  &Hold_Tap P RIGHT_BRACKET  &kp BSLH
+&kp TAB                 &kp Q   &kp W      &kp E       &kp R         &kp T                               &kp Y      &kp U            &kp I      &Hold_Tap LEFT_BRACKET O  &Hold_Tap RIGHT_BRACKET P  &kp BSLH
 &kp CAPS                &kp A   &kp S      &kp D       &kp F         &kp G                               &kp H      &kp J            &kp K      &kp L                     &kp SEMI                   &kp SQT
 &kp LSHFT               &kp Z   &Cut       &Copy       &Paste        &kp B      &kp K_MUTE    &kp LG(L)  &kp N      &kp M            &kp COMMA  &kp DOT                   &kp FSLH                   &kp RSHFT
                                 &kp LCTRL  &Clipboard  &kp LEFT_ALT  &kp ENTER  &TDLower      &TDRaise   &kp SPACE  &kp PRINTSCREEN  &kp HOME   &kp END
