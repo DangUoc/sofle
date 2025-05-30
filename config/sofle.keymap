@@ -48,6 +48,16 @@
             tap-ms = <5>;
         };
 
+        Hold_Tap: Hold_Tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
         TDLower: TDLower {
             compatible = "zmk,behavior-tap-dance";
             label = "TDLOWER";
@@ -110,17 +120,7 @@
 
             tapping-term-ms = <300>;
         };
-
-        Hold_Tap: Hold_Tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
+        
         Clipboard: Clipboard {
             compatible = "zmk,behavior-tap-dance";
             label = "CLIPBOARD";
